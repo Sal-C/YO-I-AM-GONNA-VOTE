@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./index.css";
-import RepresentativeCard from "./components/RepresentativeCard";
+import RepresentativeCard from "../RepresentativeCard";
 
 class AddressForm extends Component {
   // Setting the component's initial state
