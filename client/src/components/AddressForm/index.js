@@ -69,7 +69,13 @@ class AddressForm extends Component {
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
-        <RepresentativeCard />
+        <RepresentativeCard 
+        repName={this.state.repName} 
+        repParty={this.state.repParty}
+        repImg={this.state.repImg}
+        repPhone={this.state.color}
+        repWebsite={this.state.color}
+        />
       </div>
     );
   }
