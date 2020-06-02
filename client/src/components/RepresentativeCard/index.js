@@ -1,11 +1,11 @@
 import React from "react";
 import {Card, CardText, CardBody, CardLink,CardTitle, CardSubtitle, Row, Col} from 'reactstrap';
+import "./index.css";
   
   const RepresentativeCard = (props) => {
     return (
       <div>
             <Row>
-              <Col sm="4"></Col>
               <Col sm="3">
                 <Card>
                 <CardBody>
