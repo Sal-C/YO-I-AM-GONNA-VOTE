@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-class App extends Component {
+class Apps extends Component {
   render() {
     return (
       <div className="App">
@@ -17,5 +17,22 @@ class App extends Component {
     );
   }
 }
+
+class App extends Component {
+  render() {
+    return (
+      <form>
+        <h1>Hello</h1>
+        <p>Enter your Address:</p>
+        <input
+          type="text"
+        />
+        <button type="button">Search</button>
+      </form>
+    );
+  }
+}
+
+
 
 export default App;
