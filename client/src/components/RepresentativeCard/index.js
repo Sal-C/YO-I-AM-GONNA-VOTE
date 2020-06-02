@@ -12,7 +12,7 @@ import {Card, CardText, CardBody, CardLink,CardTitle, CardSubtitle, Row, Col} fr
                     <CardTitle>House Representative</CardTitle>
                     <CardSubtitle>{props.repName}</CardSubtitle>
                 </CardBody>
-                <img width="100%" src={props.image} alt="House Representative" />
+                <img width="100%" src={props.repImg} alt="House Representative" />
                 <CardBody>
                     <CardText>Political Party: {props.repParty}</CardText>
                     <CardLink href={props.repWebsite}>Website</CardLink>

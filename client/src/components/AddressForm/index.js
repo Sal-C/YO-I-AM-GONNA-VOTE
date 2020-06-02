@@ -41,8 +41,10 @@ class AddressForm extends Component {
   repSearch() {
     axios.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + this.state.address + 'levels=administrativeArea2&key=')
     .then(response => {
-      console.log(response.data);
-      //console.log(response.data.officials[4]);
+      //console.log(response.data);
+      console.log(response.data.officials[4]);
+      console.log(response.data.officials[4].photoUrl);
+      console.log(response.data.officials[4].phones);
       this.setState({ repName: response.data.officials[4].name });
       this.setState({ repParty: response.data.officials[4].party });
       this.setState({ repImg: response.data.officials[4].photoUrl });
@@ -73,8 +75,8 @@ class AddressForm extends Component {
         repName={this.state.repName} 
         repParty={this.state.repParty}
         repImg={this.state.repImg}
-        repPhone={this.state.color}
-        repWebsite={this.state.color}
+        repPhone={this.state.repPhone}
+        repWebsite={this.state.repWebsite}
         />
       </div>
     );
