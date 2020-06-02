@@ -42,7 +42,11 @@ class AddressForm extends Component {
     .then(response => {
       console.log(response.data);
       //console.log(response.data.officials[4]);
-      
+      this.setState({ repName: response.data.officials[4].name });
+      this.setState({ repParty: response.data.officials[4].party });
+      this.setState({ repImg: response.data.officials[4].photoUrl });
+      this.setState({ repWebsite: response.data.officials[4].urls[0] });
+      this.setState({ repPhone: response.data.officials[4].phones[0] });
     })
     .catch(error => {
       console.log(error);
