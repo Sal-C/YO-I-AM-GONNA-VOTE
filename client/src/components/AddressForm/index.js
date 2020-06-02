@@ -3,18 +3,50 @@ import React, { Component } from "react";
 import "./index.css";
 
 class AddressForm extends Component {
-    render() {
-      return (
-        <form>
-          <h1>Representative Search</h1>
-          <p>Enter your Address please:</p>
+  // Setting the component's initial state
+  state = {
+    address: ""
+  };
+
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+
+    // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
+    alert(`Your address is: ${this.state.address}`);
+    this.setState({
+      address: ""
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Representative Search</h1>
+        <p>Please Enter Your Address</p>
+        <form className="form">
           <input
+            value={this.state.address}
+            name="address"
+            onChange={this.handleInputChange}
             type="text"
+            placeholder="1234 Example Ave"
           />
-          <button type="button">Search</button>
+          <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
-      );
-    }
+      </div>
+    );
   }
+}
 
 export default AddressForm;
