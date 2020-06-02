@@ -6,7 +6,12 @@ import "./index.css";
 class AddressForm extends Component {
   // Setting the component's initial state
   state = {
-    address: ""
+    address: "",
+    repName: "",
+    repParty: "",
+    repImg: "",
+    repWebsite: "",
+    repPhone: "",
   };
 
   handleInputChange = event => {
@@ -37,6 +42,7 @@ class AddressForm extends Component {
     .then(response => {
       console.log(response.data);
       //console.log(response.data.officials[4]);
+      
     })
     .catch(error => {
       console.log(error);
