@@ -4,7 +4,7 @@ import "./index.css";
   
   const RepresentativeCard = (props) => {
     return (
-      <div className="hide">
+      <div className={props.visibility}>
             <Row>
               <Col sm="3">
                 <Card>

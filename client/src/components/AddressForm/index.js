@@ -13,6 +13,7 @@ class AddressForm extends Component {
     repImg: "",
     repWebsite: "",
     repPhone: "",
+    visibility:"hide"
   };
 
   handleInputChange = event => {
