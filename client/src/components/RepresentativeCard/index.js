@@ -9,14 +9,14 @@ import {Card, CardText, CardBody, CardLink,CardTitle, CardSubtitle, Row, Col} fr
               <Col sm="3">
                 <Card>
                 <CardBody>
-                    <CardTitle>Title</CardTitle>
-                    <CardSubtitle>Name</CardSubtitle>
+                    <CardTitle>House Representative</CardTitle>
+                    <CardSubtitle>{props.repName}</CardSubtitle>
                 </CardBody>
-                <img width="100%" src="https://images.dog.ceo/breeds/pyrenees/n02111500_9015.jpg" alt="Card image cap" />
+                <img width="100%" src={props.image} alt="House Representative" />
                 <CardBody>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                    <CardLink href="#">Website</CardLink>
-                    <CardLink href="#">Email</CardLink>
+                    <CardText>Political Party: {props.repParty}</CardText>
+                    <CardLink href={props.repWebsite}>Website</CardLink>
+                    <CardText >Phone:{props.repPhone}</CardText>
                 </CardBody>
                 </Card>
               </Col>
