@@ -1,5 +1,6 @@
 //import React from "react";
 import React, { Component } from "react";
+import axios from "axios";
 import "./index.css";
 
 class AddressForm extends Component {
@@ -27,7 +28,20 @@ class AddressForm extends Component {
     this.setState({
       address: ""
     });
+    this.repSearch()
   };
+
+
+  repSearch() {
+    axios.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + this.state.address + 'levels=administrativeArea2&key=')
+    .then(response => {
+      console.log(response.data);
+      //console.log(response.data.officials[4]);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
 
   render() {
     return (
