@@ -51,6 +51,7 @@ class AddressForm extends Component {
       this.setState({ repImg: response.data.officials[4].photoUrl });
       this.setState({ repWebsite: response.data.officials[4].urls[0] });
       this.setState({ repPhone: response.data.officials[4].phones[0] });
+      this.setState({ visibility: "show" });
     })
     .catch(error => {
       console.log(error);
@@ -78,6 +79,7 @@ class AddressForm extends Component {
         repImg={this.state.repImg}
         repPhone={this.state.repPhone}
         repWebsite={this.state.repWebsite}
+        visibility={this.state.visibility}
         />
       </div>
     );
