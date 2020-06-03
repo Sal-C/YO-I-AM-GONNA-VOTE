@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./index.css";
 import RepresentativeCard from "../RepresentativeCard";
+import RepresentativeButtons from "../RepresentativeButtons";
 
 class AddressForm extends Component {
   // Setting the component's initial state
@@ -62,6 +63,7 @@ class AddressForm extends Component {
     return (
       <div>
         <h1>Representative Search</h1>
+        <RepresentativeButtons />
         <p>Please Enter Your Address</p>
         <form className="form">
           <input
