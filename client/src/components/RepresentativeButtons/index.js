@@ -5,7 +5,7 @@ const RepresentativeButtons = (props) => {
   return (
     <div>
       <Button outline color="primary">House</Button>{' '}
-      <Button outline color="primary">Sheriff</Button>{' '}
+      <Button outline color="primary">Senators</Button>{' '}
       <Button outline color="primary">Governor</Button>
     </div>
   );
