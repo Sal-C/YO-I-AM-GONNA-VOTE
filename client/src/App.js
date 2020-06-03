@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import Where from "./components/pages/Where";
 import When from "./components/pages/When";
 import Login from "./components/pages/Login";
+import Who from "./components/pages/Who";
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/where" component={Where} />
         <Route exact path="/When" component={When} />
         <Route path="/Login" component={Login} />
+        <Route path="/Who" component={Who} />
       </div>
     </Router>
   );

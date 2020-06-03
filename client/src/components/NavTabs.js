@@ -8,6 +8,7 @@ function NavTabs() {
   const location = useLocation();
 
   return (
+
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
@@ -20,6 +21,14 @@ function NavTabs() {
           className={location.pathname === "/where" ? "nav-link active" : "nav-link"}
         >
           Where To Vote
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/who"
+          className={location.pathname === "/who" ? "nav-link active" : "nav-link"}
+        >
+          Who To Vote For
         </Link>
       </li>
       <li className="nav-item">

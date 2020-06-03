@@ -1,9 +1,9 @@
 import React from "react";
 
-function Where() {
+function Who() {
   return (
     <div>
-      <h1>Where To Vote</h1>
+      <h1>Who To Vote For</h1>
       <p>
         Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui
         mauris, ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus
@@ -15,4 +15,4 @@ function Where() {
   );
 }
 
-export default Where;
+export default Who;
