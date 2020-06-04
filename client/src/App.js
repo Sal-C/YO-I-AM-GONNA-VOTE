@@ -2,10 +2,10 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from "./components/NavBar";
 import HomePage from "./pages/Home";
 import WherePage from "./pages/Where";
 import WhenPage from "./pages/When";
@@ -16,19 +16,7 @@ export default function BasicExample() {
   return (
     <Router>
       <div>
-      <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Users</Link>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <Home />
