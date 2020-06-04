@@ -26,29 +26,26 @@ const NavBar = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/about">About</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/dashboard">Dashboard</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+          <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                How to Vote
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
+                  <NavLink href="/register">Register to Vote</NavLink>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  Reset
+                  <NavLink href="/verify">Am I Registered?</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/">Upcoming Elections</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/dashboard">Representatives</NavLink>
+            </NavItem>
           </Nav>
           <NavbarText>Simple Text</NavbarText>
         </Collapse>
