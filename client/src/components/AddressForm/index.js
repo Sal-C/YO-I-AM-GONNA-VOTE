@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./index.css";
 import RepresentativeCard from "../RepresentativeCard";
-import RepresentativeButtons from "../RepresentativeButtons";
+import RepresentativeButtons from "../RepDropdown";
 
 class AddressForm extends Component {
   // Setting the component's initial state
