@@ -9,10 +9,10 @@ import NavBar from "./components/NavBar";
 import HomePage from "./pages/Home";
 import RegisterPage from "./pages/Register";
 import VerificationPage from "./pages/Verify";
-import WherePage from "./pages/Where";
+//import WherePage from "./pages/Where";
+import RepSearch from "./pages/RepSearch";
 //import WhenPage from "./pages/When";
 //import LoginPage from "./pages/Login";
-//import WhoPage from "./pages/Who";
 
 export default function BasicExample() {
   return (
@@ -29,8 +29,8 @@ export default function BasicExample() {
           <Route path="/verify">
             <Verify />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/representatives">
+            <Representatives />
           </Route>
         </Switch>
       </div>
@@ -63,10 +63,10 @@ function Verify() {
   );
 }
 
-function Dashboard() {
+function Representatives() {
   return (
     <div>
-      <WherePage />
+      <RepSearch />
     </div>
   );
 }

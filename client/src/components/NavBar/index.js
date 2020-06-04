@@ -44,7 +44,7 @@ const NavBar = (props) => {
               <NavLink href="/">Upcoming Elections</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/dashboard">Representatives</NavLink>
+              <NavLink href="/representatives">Representatives</NavLink>
             </NavItem>
           </Nav>
           <NavbarText>Simple Text</NavbarText>
