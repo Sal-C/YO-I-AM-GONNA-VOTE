@@ -32,7 +32,7 @@ class Elections extends Component {
 
 
   electionSearch() {
-    axios.get('')
+    axios.get('https://www.googleapis.com/civicinfo/v2/elections?key=')
     .then(response => {
       //console.log(response.data);
     //   this.setState({ repName: response.data.officials[4].name });
