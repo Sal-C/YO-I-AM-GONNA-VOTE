@@ -18,18 +18,6 @@ class Elections extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-
-    // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-    alert(`Your address is: ${this.state.address}`);
-    this.setState({
-      address: ""
-    });
-    this.repSearch()
-  };
-
 
   electionSearch() {
     axios.get('https://www.googleapis.com/civicinfo/v2/elections?key=')
@@ -50,9 +38,9 @@ class Elections extends Component {
   render() {
     return (
       <div>
-        <h1>Representative Search</h1>
+        <h1>Upcoming Elections</h1>
         <RepresentativeButtons />
-        <p>Important Upcoming Elections Across the US.</p>
+        <p>A list of approaching voting events across the US.</p>
         <RepresentativeCard 
         // repName={this.state.repName} 
         // repParty={this.state.repParty}
