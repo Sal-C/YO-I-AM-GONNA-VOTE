@@ -11,7 +11,7 @@ import RegisterPage from "./pages/Register";
 import VerificationPage from "./pages/Verify";
 //import WherePage from "./pages/Where";
 import RepSearch from "./pages/RepSearch";
-//import WhenPage from "./pages/When";
+import ElectionsSearch from "./pages/Elections";
 //import LoginPage from "./pages/Login";
 
 export default function BasicExample() {
@@ -20,53 +20,13 @@ export default function BasicExample() {
       <div>
         <NavBar />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/verify">
-            <Verify />
-          </Route>
-          <Route path="/representatives">
-            <Representatives />
-          </Route>
+          <Route exact path="/" exact render={() => <HomePage />}></Route>
+          <Route exact path="/register" exact render={() => <RegisterPage />}></Route>
+          <Route exact path="/verification" exact render={() => <VerificationPage />}></Route>
+          <Route exact path="/representatives" exact render={() => <RepSearch />}></Route>
+          <Route exact path="/elections" exact render={() => <ElectionsSearch />}></Route>
         </Switch>
       </div>
     </Router>
-  );
-}
-
-
-function Home() {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
-}
-
-function Register() {
-  return (
-    <div>
-      <RegisterPage />
-    </div>
-  );
-}
-
-function Verify() {
-  return (
-    <div>
-      <VerificationPage />
-    </div>
-  );
-}
-
-function Representatives() {
-  return (
-    <div>
-      <RepSearch />
-    </div>
   );
 }

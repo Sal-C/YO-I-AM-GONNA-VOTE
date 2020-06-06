@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ElectionList from "../components/ElectionList";
 
 class Elections extends Component {
   // Setting the component's initial state
@@ -39,16 +40,16 @@ class Elections extends Component {
     return (
       <div>
         <h1>Upcoming Elections</h1>
-        <RepresentativeButtons />
         <p>A list of approaching voting events across the US.</p>
-        <RepresentativeCard 
-        // repName={this.state.repName} 
-        // repParty={this.state.repParty}
-        // repImg={this.state.repImg}
-        // repPhone={this.state.repPhone}
-        // repWebsite={this.state.repWebsite}
-        // visibility={this.state.visibility}
-        />
+        <ElectionList />
+        {/* <RepresentativeCard 
+        repName={this.state.repName} 
+        repParty={this.state.repParty}
+        repImg={this.state.repImg}
+        repPhone={this.state.repPhone}
+        repWebsite={this.state.repWebsite}
+        visibility={this.state.visibility}
+        /> */}
       </div>
     );
   }

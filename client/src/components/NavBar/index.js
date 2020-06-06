@@ -41,7 +41,7 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/">Upcoming Elections</NavLink>
+              <NavLink href="/elections">Upcoming Elections</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/representatives">Representatives</NavLink>

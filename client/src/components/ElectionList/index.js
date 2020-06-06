@@ -13,4 +13,4 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
     );
   };
 
-export default ElectionList;
+export default ElectionList
