@@ -46,6 +46,9 @@ const NavBar = (props) => {
             <NavItem>
               <NavLink href="/representatives">Representatives</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/voter-information">Where to Vote</NavLink>
+            </NavItem>
           </Nav>
           <NavbarText>Simple Text</NavbarText>
         </Collapse>

@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 import HomePage from "./pages/Home";
 import RegisterPage from "./pages/Register";
 import VerificationPage from "./pages/Verify";
-//import WherePage from "./pages/Where";
+import VoterInfo from "./pages/VoterInfo";
 import RepSearch from "./pages/RepSearch";
 import ElectionsSearch from "./pages/Elections";
 //import LoginPage from "./pages/Login";
@@ -25,6 +25,7 @@ export default function App() {
           <Route exact path="/verification" exact render={() => <VerificationPage />}></Route>
           <Route exact path="/representatives" exact render={() => <RepSearch />}></Route>
           <Route exact path="/elections" exact render={() => <ElectionsSearch />}></Route>
+          <Route exact path="/voter-information" exact render={() => <VoterInfo />}></Route>
         </Switch>
       </div>
     </Router>
