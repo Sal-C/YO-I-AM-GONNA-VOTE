@@ -14,7 +14,7 @@ import RepSearch from "./pages/RepSearch";
 import ElectionsSearch from "./pages/Elections";
 //import LoginPage from "./pages/Login";
 
-export default function BasicExample() {
+export default function App() {
   return (
     <Router>
       <div>
