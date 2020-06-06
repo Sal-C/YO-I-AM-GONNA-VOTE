@@ -6,29 +6,25 @@ import electionsJSON from "../API_Response/elections.json";
 class Elections extends Component {
   // Setting the component's initial state
   state = {
-    electionName: "",
-    electionDay:""
+    electionsJSON
   };
 
 
   electionSearch() {
-    console.log(electionsJSON)
+    console.log(electionsJSON.elections)
   }
 
   render() {
     return (
       <div>
         <h1>Upcoming Elections</h1>
-        <p>A list of approaching voting events across the US.</p>
-        <ElectionList />
-        {/* <RepresentativeCard 
-        repName={this.state.repName} 
-        repParty={this.state.repParty}
-        repImg={this.state.repImg}
-        repPhone={this.state.repPhone}
-        repWebsite={this.state.repWebsite}
-        visibility={this.state.visibility}
-        /> */}
+        <p onClick={this.electionSearch}>A list of approaching voting events across the US.</p>
+        {this.state.electionsJSON.elections.map(election => (
+         <ElectionList
+           electionName={election.name}
+           electionDay={election.electionDay}
+         />
+       ))}
       </div>
     );
   }
