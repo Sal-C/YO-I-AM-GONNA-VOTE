@@ -1,18 +1,18 @@
 import React from "react";
 import {Card, CardText, CardBody, CardLink,CardTitle, CardSubtitle, Row, Col} from 'reactstrap';
-import "./index.css";
+//import "./index.css";
   
   const RepresentativeCard = (props) => {
     return (
-      <div className={props.visibility}>
+      <div className="mb-3">
             <Row>
               <Col sm="3">
                 <Card>
                 <CardBody>
-                    <CardTitle>House Representative</CardTitle>
+                    {/* <CardTitle>Representative</CardTitle> */}
                     <CardSubtitle>{props.repName}</CardSubtitle>
                 </CardBody>
-                <img width="100%" src={props.repImg} alt="House Representative" />
+                <img width="100%" src={props.repImg} alt={props.repName} />
                 <CardBody>
                     <CardText>Political Party: {props.repParty}</CardText>
                     <CardLink href={props.repWebsite}>Website</CardLink>
