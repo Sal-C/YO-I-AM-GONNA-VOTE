@@ -1,10 +1,10 @@
 import React from "react";
 import Iframe from 'react-iframe';
 
-function Home() {
+function Verify() {
   return (
     <div>
-   <Iframe url="https://register.vote.org/?partner=111111&campaign=free-tools"
+   <Iframe url="https://verify.vote.org/?partner=111111&campaign=free-tools"
         width="450px"
         height="2000px"
         id="myId"
@@ -15,4 +15,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Verify;

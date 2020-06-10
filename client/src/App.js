@@ -1,27 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavTabs from "./components/NavTabs";
-import Home from "./components/pages/Home";
-import Where from "./components/pages/Where";
-import When from "./components/pages/When";
-import Login from "./components/pages/Login";
-import Who from "./components/pages/Who";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/Home";
+import RegisterPage from "./pages/Register";
+import VerificationPage from "./pages/Verify";
+import VoterInfo from "./pages/VoterInfo";
+import RepSearch from "./pages/RepSearch";
+import ElectionsSearch from "./pages/Elections";
+//import LoginPage from "./pages/Login";
 
-
-
-function App() {
+export default function App() {
   return (
     <Router>
       <div>
-        <NavTabs />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/where" component={Where} />
-        <Route exact path="/When" component={When} />
-        <Route path="/Login" component={Login} />
-        <Route path="/Who" component={Who} />
+        <NavBar />
+        <Switch>
+          <Route exact path="/" exact render={() => <HomePage />}></Route>
+          <Route exact path="/register" exact render={() => <RegisterPage />}></Route>
+          <Route exact path="/verification" exact render={() => <VerificationPage />}></Route>
+          <Route exact path="/representatives" exact render={() => <RepSearch />}></Route>
+          <Route exact path="/elections" exact render={() => <ElectionsSearch />}></Route>
+          <Route exact path="/voter-information" exact render={() => <VoterInfo />}></Route>
+        </Switch>
       </div>
     </Router>
   );
 }
-
-export default App;
