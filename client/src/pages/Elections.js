@@ -3,7 +3,7 @@ import ElectionSearch from '../components/ElectionSearch';
 
 function Elections() {
   return (
-    <div>
+    <div className="Center">
    <ElectionSearch />
     </div>
   );

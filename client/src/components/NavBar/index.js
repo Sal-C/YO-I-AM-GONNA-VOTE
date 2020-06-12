@@ -36,7 +36,7 @@ const NavBar = (props) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  <NavLink href="/verify">Am I Registered?</NavLink>
+                  <NavLink href="/Verification">Am I Registered?</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
