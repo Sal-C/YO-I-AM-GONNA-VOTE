@@ -3,65 +3,31 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./index.css";
 import RepresentativeCard from "../RepresentativeCard";
+import RepresentativeButtons from "../RepDropdown";
+import RepresentativeJSON from "../API_Response/representatives.json";
 
 class AddressForm extends Component {
   // Setting the component's initial state
   state = {
-    address: "",
-    repName: "",
-    repParty: "",
-    repImg: "",
-    repWebsite: "",
-    repPhone: "",
-    visibility:"hide"
-  };
-
-  handleInputChange = event => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
-
-    // Updating the input's state
-    this.setState({
-      [name]: value
-    });
+    RepresentativeJSON
   };
 
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-
-    // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-    alert(`Your address is: ${this.state.address}`);
-    this.setState({
-      address: ""
-    });
     this.repSearch()
   };
 
 
   repSearch() {
-    axios.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + this.state.address + 'levels=administrativeArea2&key=')
-    .then(response => {
-      //console.log(response.data);
-      console.log(response.data.officials[4]);
-      console.log(response.data.officials[4].photoUrl);
-      console.log(response.data.officials[4].phones);
-      this.setState({ repName: response.data.officials[4].name });
-      this.setState({ repParty: response.data.officials[4].party });
-      this.setState({ repImg: response.data.officials[4].photoUrl });
-      this.setState({ repWebsite: response.data.officials[4].urls[0] });
-      this.setState({ repPhone: response.data.officials[4].phones[0] });
-      this.setState({ visibility: "show" });
-    })
-    .catch(error => {
-      console.log(error);
-    });
+    console.log(RepresentativeJSON)
   }
 
   render() {
     return (
       <div>
         <h1>Representative Search</h1>
+        <RepresentativeButtons />
         <p>Please Enter Your Address</p>
         <form className="form">
           <input
@@ -73,14 +39,15 @@ class AddressForm extends Component {
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
-        <RepresentativeCard 
-        repName={this.state.repName} 
-        repParty={this.state.repParty}
-        repImg={this.state.repImg}
-        repPhone={this.state.repPhone}
-        repWebsite={this.state.repWebsite}
-        visibility={this.state.visibility}
-        />
+        {this.state.RepresentativeJSON.officials.map(rep => (
+         <RepresentativeCard
+         repName={rep.name} 
+         repParty={rep.party}
+         repImg={rep.photoUrl}
+         repPhone={rep.phones[0]}
+         repWebsite={rep.urls[0]}
+         />
+       ))}
       </div>
     );
   }
