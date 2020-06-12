@@ -36,7 +36,7 @@ const NavBar = (props) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  <NavLink href="/verify">Am I Registered?</NavLink>
+                  <NavLink href="/Verification">Am I Registered?</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -50,7 +50,7 @@ const NavBar = (props) => {
               <NavLink href="/voter-information">Where to Vote</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText><h2>Yo! I'm ‘onna Vote!</h2></NavbarText>
         </Collapse>
       </Navbar>
     </div>

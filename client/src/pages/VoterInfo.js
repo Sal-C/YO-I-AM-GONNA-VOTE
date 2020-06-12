@@ -3,7 +3,7 @@ import VoterInfo from "../components/VoterInfo";
 
 function Where() {
   return (
-    <div>
+    <div className="Center">
       <VoterInfo />
     </div>
   );
