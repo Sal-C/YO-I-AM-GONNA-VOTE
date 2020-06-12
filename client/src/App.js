@@ -26,6 +26,7 @@ export default function App() {
           <Route exact path="/representatives" exact render={() => <RepSearch />}></Route>
           <Route exact path="/elections" exact render={() => <ElectionsSearch />}></Route>
           <Route exact path="/voter-information" exact render={() => <VoterInfo />}></Route>
+          <Route exact path="/contests" exact render={() => <VoterInfo />}></Route>
         </Switch>
       </div>
     </Router>
