@@ -12,6 +12,7 @@ import VerificationPage from "./pages/Verify";
 import VoterInfo from "./pages/VoterInfo";
 import RepSearch from "./pages/RepSearch";
 import ElectionsSearch from "./pages/Elections";
+import ContestsPage from "./pages/Contests";
 //import LoginPage from "./pages/Login";
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
           <Route exact path="/representatives" exact render={() => <RepSearch />}></Route>
           <Route exact path="/elections" exact render={() => <ElectionsSearch />}></Route>
           <Route exact path="/voter-information" exact render={() => <VoterInfo />}></Route>
-          <Route exact path="/contests" exact render={() => <VoterInfo />}></Route>
+          <Route exact path="/contests" exact render={() => <ContestsPage />}></Route>
         </Switch>
       </div>
     </Router>

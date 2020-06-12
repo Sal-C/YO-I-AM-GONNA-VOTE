@@ -28,7 +28,7 @@ class VoterInfo extends Component {
                 <ListGroupItemText>{voterInfo.pollingLocations[0].address.line1}</ListGroupItemText>
                 <ListGroupItemText>{voterInfo.pollingLocations[0].notes}</ListGroupItemText>
                 <ListGroupItemText>{voterInfo.pollingLocations[0].pollingHours}</ListGroupItemText>
-                <Button color="primary" size="lg" href="/register" block>Contests</Button>
+                <Button color="primary" size="lg" href="/contests" block>Contests</Button>
               </ListGroupItem>
             </ListGroup>
         </Col>
