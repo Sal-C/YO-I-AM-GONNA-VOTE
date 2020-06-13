@@ -50,7 +50,7 @@ const NavBar = (props) => {
               <NavLink href="/voter-information">Where to Vote</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText ><NavLink href="/login">Login</NavLink></NavbarText>
         </Collapse>
       </Navbar>
     </div>
