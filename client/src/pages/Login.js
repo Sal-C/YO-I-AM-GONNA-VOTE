@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios'
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
@@ -30,6 +31,19 @@ class LogIn extends Component {
       password: "",
       address: ""
     });
+    // send a POST request
+    axios.post('/login',{
+        username: this.state.username,
+        password: this.state.password,
+        address: this.state.address
+    }).then(response => {
+      console.log(response)
+      if(response.data) {
+        console.log("Successful Sign Up!")
+      } else {
+        console.log("Failed to login...")
+      }
+    })
   };
   render() {
     return (
