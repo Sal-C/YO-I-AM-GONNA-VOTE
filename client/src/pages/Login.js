@@ -3,6 +3,34 @@ import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 class LogIn extends Component {
+  state = {
+    username: "",
+    password: "",
+    address:""
+  };
+
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+
+    // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
+    alert(`Hello ${this.state.username}! Your address is "${this.state.address}" and password is "${this.state.password}."`);
+    this.setState({
+      username: "",
+      password: "",
+      address: ""
+    });
+  };
   render() {
     return (
       <div className="App">
@@ -13,20 +41,20 @@ class LogIn extends Component {
       <Row form>
         <Col md={6}>
           <FormGroup>
-            <Label for="exampleEmail">Email</Label>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            <Label for="exampleEmail">Username</Label>
+            <Input type="text" name="username" id="exampleEmail" onChange={this.handleInputChange} placeholder="with a placeholder" />
           </FormGroup>
         </Col>
         <Col md={6}>
           <FormGroup>
             <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+            <Input type="password" name="password" id="examplePassword" onChange={this.handleInputChange} placeholder="password placeholder" />
           </FormGroup>
         </Col>
       </Row>
       <FormGroup>
         <Label for="exampleAddress">Address</Label>
-        <Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
+        <Input type="text" name="address" id="exampleAddress" onChange={this.handleInputChange} placeholder="1234 Main St"/>
       </FormGroup>
       <FormGroup>
         <Label for="exampleAddress2">Address 2</Label>
@@ -56,7 +84,7 @@ class LogIn extends Component {
         <Input type="checkbox" name="check" id="exampleCheck"/>
         <Label for="exampleCheck" check>Authentication</Label>
       </FormGroup>
-      <Button>Sign in</Button>
+      <Button onClick={this.handleFormSubmit}>Sign in</Button>
     </Form>
     </Col>
     </Row>
