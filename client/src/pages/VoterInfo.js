@@ -1,10 +1,13 @@
 import React from "react";
-import VoterInfo from "../components/VoterInfo";
+import {VoterInfo, Map} from "../components/VoterInfo"
 
 function Where() {
   return (
     <div>
       <VoterInfo />
+    </div>
+    <div>
+      <MapWithAMarker />
     </div>
   );
 }
