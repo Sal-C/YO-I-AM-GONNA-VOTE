@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import axios from "axios";
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, Col, Button  } from 'reactstrap';
 import voterInfo from "../API_Response/voterInfo.json";
 
 class VoterInfo extends Component {
@@ -11,7 +11,7 @@ class VoterInfo extends Component {
 
 
   electionSearch() {
-    //console.log(voterInfo)
+    console.log(voterInfo)
     //Polling Location Info for Google Maps
     //console.log(voterInfo.pollingLocations)
   }
@@ -20,12 +20,19 @@ class VoterInfo extends Component {
     return (
       <div>
         <h1 onClick={this.electionSearch}>Local Polling Places, Early Voting Sites</h1>
-        <ListGroup>
-            <ListGroupItem>Location: {voterInfo.pollingLocations[0].address.locationName}</ListGroupItem>
-            <ListGroupItem>Address: {voterInfo.pollingLocations[0].address.line1}, {voterInfo.pollingLocations[0].address.city}, {voterInfo.pollingLocations[0].address.state} {voterInfo.pollingLocations[0].address.zip}</ListGroupItem>
-            <ListGroupItem>Notes: {voterInfo.pollingLocations[0].notes}</ListGroupItem>
-            <ListGroupItem>Polling Hours: {voterInfo.pollingLocations[0].pollingHours}</ListGroupItem>
-        </ListGroup>
+        <Row>
+          <Col sm="4">
+            <ListGroup>
+              <ListGroupItem>
+                <ListGroupItemHeading>{voterInfo.pollingLocations[0].address.locationName}</ListGroupItemHeading>
+                <ListGroupItemText>{voterInfo.pollingLocations[0].address.line1}</ListGroupItemText>
+                <ListGroupItemText>{voterInfo.pollingLocations[0].notes}</ListGroupItemText>
+                <ListGroupItemText>{voterInfo.pollingLocations[0].pollingHours}</ListGroupItemText>
+                <Button color="primary" size="lg" href="/contests" block>Contests</Button>
+              </ListGroupItem>
+            </ListGroup>
+        </Col>
+        </Row>
       </div>
     );
   }
