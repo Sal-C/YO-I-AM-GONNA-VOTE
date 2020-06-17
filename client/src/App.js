@@ -37,12 +37,14 @@ const App = () =>
     <div>
       <Nav />
       <Switch>
-      <Route exact path="/" component={Books} />
-        <Route exact path="/home" component={Books} />
-        <Route exact path="/books" component={Books} />
-        <Route exact path="/books/:id" component={Detail} />
-        <PrivateRoute exact path="/protected" component={Users} />
-        <Route exact path="/users" component={Users} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/home" component={HomePage} />
+        <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/verification" component={VerificationPage} />
+        <PrivateRoute exact path="/representatives" component={RepSearch} />
+        <PrivateRoute exact path="/elections" component={ElectionsSearch} />
+        <PrivateRoute exact path="/voter-information" component={VoterInfo} />
+        <PrivateRoute exact path="/contests" component={ContestsPage} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/logout" component={Logout} />
