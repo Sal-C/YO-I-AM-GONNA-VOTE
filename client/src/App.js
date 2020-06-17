@@ -13,6 +13,8 @@ import VoterInfo from "./pages/VoterInfo";
 import RepSearch from "./pages/RepSearch";
 import ElectionsSearch from "./pages/Elections";
 //import LoginPage from "./pages/Login";
+import { Text } from 'gestalt';
+import 'gestalt/dist/gestalt.css';
 
 export default function App() {
   return (

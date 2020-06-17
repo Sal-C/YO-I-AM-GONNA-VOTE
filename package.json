@@ -20,10 +20,12 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@types/gestalt": "^1.15.3",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
+    "gestalt": "^3.0.2",
     "google-maps-react": "^2.0.6",
     "if-env": "^1.0.4",
     "react": "^16.13.1",

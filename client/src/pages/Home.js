@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Toast, ToastBody, ToastHeader } from 'reactstrap';
+import { Text } from 'gestalt';
+import 'gestalt/dist/gestalt.css';
 
 const Learn = (props) => {
   return (
