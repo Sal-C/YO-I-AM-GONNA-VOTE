@@ -24,11 +24,13 @@ We want to develop a user-friendly application which can serve as a one-stop sho
 - Additional [Icebox](https://github.com/Sal-C/YO-I-AM-GONNA-VOTE/projects/1) features and Porject board
 
 ## Technologies
-React
-HTML
-CSS 
-JavaScript
-jQuery
+- React
+- Mongo
+- HTML
+- CSS 
+- JavaScript
+- jQuery
+- Node
 
 
 ## APIs
