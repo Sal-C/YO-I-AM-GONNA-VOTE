@@ -51,18 +51,18 @@ class LogIn extends Component {
         <Row>
       <Col md={8}><img src="https://images.unsplash.com/photo-1584714574679-99078d0a7b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="login" /></Col>
       <Col md={4}>
-    <Form body inverse style={{ backgroundColor: '#000032', borderColor: '#000032', color: "white", padding: "50px 50px 244px 50px"}}>
+    <Form className="signup" body inverse style={{ backgroundColor: '#000032', borderColor: '#000032', color: "white", padding: "50px 50px 244px 50px"}}>
       <Row form>
         <Col md={6}>
           <FormGroup>
-            <Label for="exampleEmail">Username</Label>
-            <Input type="text" name="username" id="exampleEmail" onChange={this.handleInputChange} placeholder="with a placeholder" />
+            <Label for="exampleEmail">Email</Label>
+            <Input type="email" name="username" id="email-input" onChange={this.handleInputChange} placeholder="with a placeholder" />
           </FormGroup>
         </Col>
         <Col md={6}>
           <FormGroup>
             <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" onChange={this.handleInputChange} placeholder="password placeholder" />
+            <Input type="password" name="password" id="password-input" onChange={this.handleInputChange} placeholder="password placeholder" />
           </FormGroup>
         </Col>
       </Row>
@@ -94,11 +94,11 @@ class LogIn extends Component {
           </FormGroup>  
         </Col>
       </Row>
-      <FormGroup check>
-        <Input type="checkbox" name="check" id="exampleCheck"/>
-        <Label for="exampleCheck" check>Authentication</Label>
-      </FormGroup>
-      <Button onClick={this.handleFormSubmit}>Sign in</Button>
+      <div  id="alert" className="alert alert-danger" role="alert" style={{display: 'none'}}>
+            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span className="sr-only">Error:</span> <span className="msg"></span>
+          </div>
+      <Button type="submit" className="btn btn-default">Sign Up </Button>
     </Form>
     </Col>
     </Row>
