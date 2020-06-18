@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ElectionList from "../ElectionList";
+import { Row, Col  } from 'reactstrap';
 
 class Elections extends Component {
   // Setting the component's initial state
@@ -35,12 +36,18 @@ class Elections extends Component {
     } else {
       return (
         <div>
+          <Row>
+          <Col sm="4"></Col>
+          <Col sm="4">
           {this.state.electionsJSON.elections.map(election => (
             <ElectionList
               electionName={election.name}
               electionDay={election.electionDay}
             />
           ))}
+          </Col>
+          <Col sm="4"></Col>
+          </Row>
       </div>
       );
     }
