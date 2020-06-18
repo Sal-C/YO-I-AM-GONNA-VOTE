@@ -9,10 +9,10 @@ import {
   Marker
 } from "react-google-maps";
 import Geocode from "react-geocode";
-import {pollingLocations} from './API_Response/voterInfo.json'
+import {pollingLocations} from '../API_Response/voterInfo.json'
 
 // Pass in Google API key
-Geocode.setApiKey("GOOGLE_API_KEY");
+Geocode.setApiKey(process.env.REACT_APP_MAPS);
 
 // Creates Google Map and geocoded marker(s)
 const MapWithAMarker = withScriptjs(withGoogleMap(props =>{
@@ -61,7 +61,7 @@ class Map extends React.Component {
 
     <div>
       <MapWithAMarker
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key={GOOGLE_API_KEY}&v=3.exp&libraries=geometry,drawing,places"
+      googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS}&v=3.exp&libraries=geometry,drawing,places`}
       loadingElement={<div style={{ height: `100%` }} />}
       containerElement={<div style={{ height: `400px` }} />}
       mapElement={<div style={{ height: `100%` }} />}

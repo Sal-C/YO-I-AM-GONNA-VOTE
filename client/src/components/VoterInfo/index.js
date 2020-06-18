@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import axios from "axios";
 import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, Col, Button  } from 'reactstrap';
 import voterInfo from "../API_Response/voterInfo.json";
+import GoogleMaps from "../GoogleMaps/map";
 
 class VoterInfo extends Component {
   // Setting the component's initial state
@@ -31,6 +32,9 @@ class VoterInfo extends Component {
                 <Button color="primary" size="lg" href="/contests" block>Contests</Button>
               </ListGroupItem>
             </ListGroup>
+        </Col>
+        <Col sm="7">
+          <GoogleMaps />
         </Col>
         </Row>
       </div>

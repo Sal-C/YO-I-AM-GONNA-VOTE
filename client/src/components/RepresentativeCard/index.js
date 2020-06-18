@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardText, CardBody, CardLink,CardTitle, CardSubtitle, Row, Col} from 'reactstrap';
+import {Card, CardText, CardBody, CardLink, CardSubtitle, Row, Col} from 'reactstrap';
 //import "./index.css";
   
   const RepresentativeCard = (props) => {

@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Auth from '../../utils/Auth';
 import { Link } from "react-router-dom";
-import { Container } from "../../components/Grid";
-import { Input } from "../../components/Form";
+import { Input } from 'reactstrap';
 import "./Login.css";
 
 class Login extends Component {
@@ -56,7 +55,7 @@ class Login extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div>
         <form className="form-signin">
           <h1 className="h4 mb-3 font-weight-normal">Please login</h1>
           <label htmlFor="username" className="sr-only">email</label>
@@ -102,7 +101,7 @@ class Login extends Component {
             <Link to={"/signup"}>Sign Up</Link>
           </p>
         </form>
-      </Container>
+      </div>
     );
   }
 }

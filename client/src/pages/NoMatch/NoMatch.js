@@ -1,9 +1,8 @@
 import React from "react";
-import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
+import { Jumbotron, Row, Col } from 'reactstrap';
 
 const NoMatch = () =>
-  <Container fluid>
+  <div>
     <Row>
       <Col size="md-12">
         <Jumbotron>
@@ -16,6 +15,6 @@ const NoMatch = () =>
         </Jumbotron>
       </Col>
     </Row>
-  </Container>;
+  </div>;
 
 export default NoMatch;
