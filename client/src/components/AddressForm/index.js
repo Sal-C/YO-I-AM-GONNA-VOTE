@@ -1,10 +1,8 @@
-//import React from "react";
 import React, { Component } from "react";
 import axios from "axios";
 import { Input, Button } from 'reactstrap';
 import RepresentativeCard from "../RepresentativeCard";
 //import RepresentativeButtons from "../RepDropdown";
-//import RepresentativeJSON from "../API_Response/representatives.json";
 
 class AddressForm extends Component {
   // Setting the component's initial state
@@ -43,7 +41,6 @@ class AddressForm extends Component {
         isLoaded: true,
         RepresentativeJSON: response.data 
       });
-      console.log(this.state.RepresentativeJSON);
     })
     .catch(error => {
       console.log(error);
