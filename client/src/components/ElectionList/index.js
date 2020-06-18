@@ -12,7 +12,7 @@ const Example = (props) => {
           <ToastBody>
           This election will take place on: {props.electionDay}.
           </ToastBody>
-          <Button outline color="primary" id={props.electionID} onClick={props.simplifiedFunction}>Find Polling Locations</Button>
+          <Button outline color="primary" href="/voter-information">Find Polling Locations</Button>
         </Toast>
       </div>
     </div>
