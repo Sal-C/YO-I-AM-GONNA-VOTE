@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Auth from '../../utils/Auth';
 import { Link } from "react-router-dom";
-import { Input } from 'reactstrap';
+import { Input, Row, Col } from 'reactstrap';
 import "./Login.css";
 
 class Login extends Component {
@@ -56,6 +56,11 @@ class Login extends Component {
   render() {
     return (
       <div>
+        <Row>
+          <Col md={8}><img src="https://images.unsplash.com/photo-1584714574679-99078d0a7b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="img-fluid" alt="login" /></Col>
+          <Col md={4}>
+            
+        
         <form className="form-signin">
           <h1 className="h4 mb-3 font-weight-normal">Please login</h1>
           <label htmlFor="username" className="sr-only">email</label>
@@ -101,6 +106,8 @@ class Login extends Component {
             <Link to={"/signup"}>Sign Up</Link>
           </p>
         </form>
+        </Col>
+        </Row>
       </div>
     );
   }
