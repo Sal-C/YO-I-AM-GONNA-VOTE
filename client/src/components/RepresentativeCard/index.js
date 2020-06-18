@@ -16,8 +16,8 @@ import {Card, CardText, CardBody, CardLink, CardSubtitle, Row, Col} from 'reacts
                         <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">{props.repName}</h5>
-                            <p className="card-text">{props.repParty}</p>
-                            <p className="card-text" href={props.repWebsite}>Website</p>
+                            <p className="card-text">Party: {props.repParty}</p>
+                            <a className="card-text" href={props.repWebsite}>Website: {props.repWebsite}</a>
                             <p className="card-text">Phone:{props.repPhone}</p>
                         </div>
                         </div>

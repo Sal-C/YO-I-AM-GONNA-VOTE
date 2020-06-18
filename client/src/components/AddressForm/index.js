@@ -67,13 +67,14 @@ class AddressForm extends Component {
             placeholder="1234 Example Ave"
           />
           <div className="input-group-append">
-          <button class="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
+          <button className="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
           </div>
           </div>
         </form>
         </Col>
         <Col sm="4"></Col>
         </Row>
+        <div style={{height:"450px"}}></div>
       </div>;
     } else {
       return (
@@ -92,7 +93,7 @@ class AddressForm extends Component {
             placeholder="1234 Example Ave"
           />
           <div className="input-group-append">
-          <button class="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
+          <button className="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
           </div>
           </div>
         </form>
@@ -104,6 +105,8 @@ class AddressForm extends Component {
          repName={rep.name} 
          repParty={rep.party}
          repImg={rep.photoUrl}
+         repWebsite={rep.urls}
+         repPhone={rep.phones}
          />
        ))}
       </div>

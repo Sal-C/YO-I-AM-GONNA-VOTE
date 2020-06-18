@@ -121,6 +121,7 @@ class VoterInfo extends Component {
             </Col>
             <Col sm="4"></Col>
           </Row>
+          <div style={{height:"450px"}}></div>
       </div>;
     } else {
       return (
