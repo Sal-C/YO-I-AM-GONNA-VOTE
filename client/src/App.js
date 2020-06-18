@@ -9,7 +9,7 @@ import VerificationPage from "./pages/Verify";
 import VoterInfo from "./pages/VoterInfo";
 import RepSearch from "./pages/RepSearch";
 import ElectionsSearch from "./pages/Elections";
-import ContestsPage from "./pages/Contests";
+import ContestsPage from "./pages/absentee-ballot";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/NavBar";
 import Login from "./pages/Login/index";
@@ -47,7 +47,7 @@ const App = () =>
         <PrivateRoute exact path="/representatives" component={RepSearch} />
         <PrivateRoute exact path="/elections" component={ElectionsSearch} />
         <PrivateRoute exact path="/voter-information" component={VoterInfo} />
-        <PrivateRoute exact path="/contests" component={ContestsPage} />
+        <Route exact path="/absentee-ballot" component={ContestsPage} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/logout" component={Logout} />

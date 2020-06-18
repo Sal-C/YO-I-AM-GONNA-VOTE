@@ -34,9 +34,11 @@ const NavBar = (props) => {
                 <DropdownItem>
                   <NavLink href="/register">Register to Vote</NavLink>
                 </DropdownItem>
-                <DropdownItem divider />
                 <DropdownItem>
                   <NavLink href="/verification">Am I Registered?</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavLink href="/absentee-ballot">Absentee Ballot</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
