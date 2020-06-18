@@ -5,7 +5,7 @@ const passport = require('passport');
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-var MONGODB_URI = process.env.MONGOD_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGOD_URI || "mongodb://user1:password1@ds137488.mlab.com:37488/heroku_l9ds7l5r";
 require('dotenv').config();
 
 // Configure body parser for AJAX requests
