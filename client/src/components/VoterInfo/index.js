@@ -102,30 +102,50 @@ class VoterInfo extends Component {
       return <div>
         <h1 className="text-center">Find Your Nearest Polling Place</h1>
         <p className="text-center">Please Enter Your Address</p>
-        <form className="form">
-          <Input
-            name="address"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="1234 Example Ave"
-          />
-          <Button onClick={this.handleFormSubmit}>Submit</Button>
-        </form>
+        <Row>
+            <Col sm="4"></Col>
+            <Col sm="4">
+            <form className="form">
+              <div className="input-group">
+              <Input
+                name="address"
+                onChange={this.handleInputChange}
+                type="text"
+                placeholder="1234 Example Ave"
+              />
+              <div className="input-group-append">
+              <button class="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
+              </div>
+              </div>
+            </form>
+            </Col>
+            <Col sm="4"></Col>
+          </Row>
       </div>;
     } else {
       return (
         <div>
           <h1 className="text-center">Find Your Nearest Polling Place</h1>
           <p className="text-center">Please Enter Your Address</p>
-          <form className="form">
-            <Input
-              name="address"
-              onChange={this.handleInputChange}
-              type="text"
-              placeholder="1234 Example Ave"
-            />
-            <Button onClick={this.handleFormSubmit}>Submit</Button>
-          </form>
+          <Row>
+            <Col sm="4"></Col>
+            <Col sm="4">
+            <form className="form">
+              <div className="input-group">
+              <Input
+                name="address"
+                onChange={this.handleInputChange}
+                type="text"
+                placeholder="1234 Example Ave"
+              />
+              <div className="input-group-append">
+              <button class="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
+              </div>
+              </div>
+            </form>
+            </Col>
+            <Col sm="4"></Col>
+          </Row>
           <Row>
           <Col sm="4">
             <ListGroup>

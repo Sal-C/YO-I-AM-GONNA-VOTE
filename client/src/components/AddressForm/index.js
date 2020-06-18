@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Input, Button } from 'reactstrap';
+import { Input, Col, Row } from 'reactstrap';
 import RepresentativeCard from "../RepresentativeCard";
 //import RepresentativeButtons from "../RepDropdown";
 
@@ -54,32 +54,51 @@ class AddressForm extends Component {
     } else if (!isLoaded) {
       return <div>
         <h1 className="text-center">Representative Search</h1>
-        {/* <RepresentativeButtons /> */}
         <p className="text-center">Please Enter Your Address</p>
+        <Row>
+        <Col sm="4"></Col>
+        <Col sm="4">
         <form className="form">
+          <div className="input-group">
           <Input
             name="address"
             onChange={this.handleInputChange}
             type="text"
             placeholder="1234 Example Ave"
           />
-          <Button onClick={this.handleFormSubmit}>Submit</Button>
+          <div className="input-group-append">
+          <button class="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
+          </div>
+          </div>
         </form>
+        </Col>
+        <Col sm="4"></Col>
+        </Row>
       </div>;
     } else {
       return (
         <div>
         <h1 className="text-center">Representative Search</h1>
         <p className="text-center">Please Enter Your Address</p>
+        <Row>
+        <Col sm="4"></Col>
+        <Col sm="4">
         <form className="form">
+          <div className="input-group">
           <Input
             name="address"
             onChange={this.handleInputChange}
             type="text"
             placeholder="1234 Example Ave"
           />
-          <Button onClick={this.handleFormSubmit}>Submit</Button>
+          <div className="input-group-append">
+          <button class="btn waves-effect waves-light react-button" onClick={this.handleFormSubmit}>Submit</button>
+          </div>
+          </div>
         </form>
+        </Col>
+        <Col sm="4"></Col>
+        </Row>
         {this.state.RepresentativeJSON.officials.map(rep => (
          <RepresentativeCard
          repName={rep.name} 
