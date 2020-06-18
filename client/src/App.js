@@ -2,6 +2,7 @@ import React from "react";
 import Auth from './utils/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import './App.css';
 import HomePage from "./pages/Home";
 import RegisterPage from "./pages/Register";
 import VerificationPage from "./pages/Verify";
@@ -35,7 +36,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 const App = () =>
   <Router>
-    <div>
+    <div id="universal-styling">
       <Nav />
       <Switch>
         <Route exact path="/" component={HomePage} />
