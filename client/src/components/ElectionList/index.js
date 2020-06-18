@@ -1,16 +1,22 @@
-import React from "react";
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import React from 'react';
+import { Toast, ToastBody, ToastHeader, Button } from 'reactstrap';
 
-  
-  const ElectionList = (props) => {
-    return (
-      <div>
-            <ListGroup horizontal>
-                <ListGroupItem>{props.electionName}</ListGroupItem>
-                <ListGroupItem>{props.electionDay}</ListGroupItem>
-            </ListGroup>
+const Example = (props) => {
+  return (
+    <div>
+      <div className="p-3 my-2 rounded">
+        <Toast>
+          <ToastHeader>
+          {props.electionName}
+          </ToastHeader>
+          <ToastBody>
+          This election will take place on: {props.electionDay}.
+          </ToastBody>
+          <Button outline color="primary" id={props.electionID} onClick={props.simplifiedFunction}>Find Polling Locations</Button>
+        </Toast>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
-export default ElectionList
+export default Example;
