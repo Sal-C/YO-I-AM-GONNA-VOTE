@@ -146,15 +146,14 @@ class VoterInfo extends Component {
             </Col>
             <Col sm="4"></Col>
           </Row>
-          <Row>
+          <Row style={{marginTop:"30px", marginBottom:"20px"}}>
           <Col sm="4">
             <ListGroup>
-              <ListGroupItem>
+              <ListGroupItem style={{backgroundColor:"black", border: "2px solid #1d7d74", marginLeft:"10px", marginRight:"10px"}}>
               <ListGroupItemHeading>{this.state.pollingLocation.address.locationName}</ListGroupItemHeading>
                 <ListGroupItemText>{this.state.pollingLocation.address.line1}</ListGroupItemText>
                 <ListGroupItemText>{this.state.pollingLocation.notes}</ListGroupItemText>
                 <ListGroupItemText>{this.state.pollingLocation.pollingHours}</ListGroupItemText>
-                <Button color="primary" size="lg" href="/contests" block>Contests</Button>
               </ListGroupItem>
             </ListGroup>
         </Col>
