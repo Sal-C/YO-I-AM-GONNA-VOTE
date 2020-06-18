@@ -15,6 +15,7 @@ import Nav from "./components/NavBar";
 import Login from "./pages/Login/index";
 import Logout from "./components/Logout";
 import SignUp from "./pages/SignUp";
+import Footer from "./components/Footer";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -52,6 +53,7 @@ const App = () =>
         <Route exact path="/logout" component={Logout} />
         <Route component={HomePage} />
       </Switch>
+      <Footer />
     </div>
   </Router>;
 
