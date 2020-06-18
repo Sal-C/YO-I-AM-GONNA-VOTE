@@ -5,6 +5,7 @@ const passport = require('passport');
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+var MONGODB_URI = process.env.MONGOD_URI || "mongodb://localhost/mongoHeadlines";
 require('dotenv').config();
 
 // Configure body parser for AJAX requests
@@ -31,12 +32,7 @@ app.use(routes);
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
-  {
-    useMongoClient: true
-  }
-);
+mongoose.connect(MONGODB_URI);
 
 // Start the API server
 app.listen(PORT, function() {
