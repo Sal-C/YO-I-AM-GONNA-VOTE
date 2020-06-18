@@ -1,3 +1,10 @@
 #universal-styling{
     font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgb(26, 26, 26);
+    color: #ffffff;
+}
+
+#react-navbar{
+    background-color: transparent;
+    color: white;
 }

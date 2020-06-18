@@ -21,7 +21,7 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar dark id="react-navbar" expand="md">
         <NavbarBrand href="/">Home</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -30,7 +30,7 @@ const NavBar = (props) => {
               <DropdownToggle nav caret>
                 How to Vote
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu right className="bg-dark text-white">
                 <DropdownItem>
                   <NavLink href="/register">Register to Vote</NavLink>
                 </DropdownItem>
