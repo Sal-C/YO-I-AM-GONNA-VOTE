@@ -6,7 +6,7 @@ import AddressForm from "../components/AddressForm";
 class RepSearch extends Component {
   render() {
     return (
-      <div className="Center">
+      <div className="App">
         <AddressForm />
       </div>
     );

@@ -1,55 +1,96 @@
-//import React from "react";
 import React, { Component } from "react";
 import axios from "axios";
-import "./index.css";
+import { Input, Button } from 'reactstrap';
 import RepresentativeCard from "../RepresentativeCard";
-import RepresentativeButtons from "../RepDropdown";
-import RepresentativeJSON from "../API_Response/representatives.json";
+//import RepresentativeButtons from "../RepDropdown";
 
 class AddressForm extends Component {
   // Setting the component's initial state
-  state = {
-    RepresentativeJSON
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      RepresentativeJSON: [],
+      address: ""
+    };
+  }
+
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
   };
 
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    this.repSearch()
+    this.componentDidMount()
   };
 
 
-  repSearch() {
-    console.log(RepresentativeJSON)
+  componentDidMount() {
+    axios.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + this.state.address + 'levels=administrativeArea2&key=')
+    .then(response => {
+      console.log(response.data);
+      this.setState({ 
+        isLoaded: true,
+        RepresentativeJSON: response.data 
+      });
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 
   render() {
-    return (
-      <div>
+    const { error, isLoaded, items } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>
         <h1>Representative Search</h1>
-        <RepresentativeButtons />
+        {/* <RepresentativeButtons /> */}
         <p>Please Enter Your Address</p>
         <form className="form">
-          <input
-            value={this.state.address}
+          <Input
             name="address"
             onChange={this.handleInputChange}
             type="text"
             placeholder="1234 Example Ave"
           />
-          <button onClick={this.handleFormSubmit}>Submit</button>
+          <Button onClick={this.handleFormSubmit}>Submit</Button>
+        </form>
+      </div>;
+    } else {
+      return (
+        <div>
+        <h1>Representative Search</h1>
+        {/* <RepresentativeButtons /> */}
+        <p>Please Enter Your Address</p>
+        <form className="form">
+          <Input
+            name="address"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="1234 Example Ave"
+          />
+          <Button onClick={this.handleFormSubmit}>Submit</Button>
         </form>
         {this.state.RepresentativeJSON.officials.map(rep => (
          <RepresentativeCard
          repName={rep.name} 
          repParty={rep.party}
          repImg={rep.photoUrl}
-         repPhone={rep.phones[0]}
-         repWebsite={rep.urls[0]}
          />
        ))}
       </div>
-    );
+      );
+    }
   }
 }
 
