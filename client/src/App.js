@@ -50,7 +50,7 @@ const App = () =>
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/logout" component={Logout} />
-        <Route component={NoMatch} />
+        <Route component={HomePage} />
       </Switch>
     </div>
   </Router>;

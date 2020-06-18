@@ -100,8 +100,8 @@ class VoterInfo extends Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>
-        <h1>Find Your Nearest Polling Place</h1>
-        <p>Please Enter Your Address</p>
+        <h1 className="text-center">Find Your Nearest Polling Place</h1>
+        <p className="text-center">Please Enter Your Address</p>
         <form className="form">
           <Input
             name="address"
@@ -115,8 +115,8 @@ class VoterInfo extends Component {
     } else {
       return (
         <div>
-          <h1>Find Your Nearest Polling Place</h1>
-          <p>Please Enter Your Address</p>
+          <h1 className="text-center">Find Your Nearest Polling Place</h1>
+          <p className="text-center">Please Enter Your Address</p>
           <form className="form">
             <Input
               name="address"

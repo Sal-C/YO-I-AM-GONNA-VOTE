@@ -53,9 +53,9 @@ class AddressForm extends Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>
-        <h1>Representative Search</h1>
+        <h1 className="text-center">Representative Search</h1>
         {/* <RepresentativeButtons /> */}
-        <p>Please Enter Your Address</p>
+        <p className="text-center">Please Enter Your Address</p>
         <form className="form">
           <Input
             name="address"
@@ -69,9 +69,8 @@ class AddressForm extends Component {
     } else {
       return (
         <div>
-        <h1>Representative Search</h1>
-        {/* <RepresentativeButtons /> */}
-        <p>Please Enter Your Address</p>
+        <h1 className="text-center">Representative Search</h1>
+        <p className="text-center">Please Enter Your Address</p>
         <form className="form">
           <Input
             name="address"
