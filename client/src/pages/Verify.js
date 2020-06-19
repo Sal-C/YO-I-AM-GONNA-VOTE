@@ -5,6 +5,8 @@ import { Row, Col  } from 'reactstrap';
 function Verify() {
   return (
     <div>
+      <h1 className="text-center">Voter Verification</h1>
+        <p className="text-center">Confirm your voter registration status.</p>
    <Row>
         <Col sm="4"></Col>
         <Col sm="4">

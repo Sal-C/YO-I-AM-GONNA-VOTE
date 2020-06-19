@@ -36,6 +36,8 @@ class Elections extends Component {
     } else {
       return (
         <div>
+          <h1 className="text-center">UPCOMING ELECTIONS</h1>
+          <p className="text-center">A list of approaching elections across the country.</p>
           <Row>
           <Col sm="4"></Col>
           <Col sm="4">

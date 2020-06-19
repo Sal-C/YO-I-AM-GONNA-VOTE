@@ -5,6 +5,8 @@ import { Row, Col  } from 'reactstrap';
 function Register() {
   return (
     <div>
+      <h1 className="text-center">REGISTER TO VOTE</h1>
+      <p className="text-center">Take 2-minutes out of your day to become a voice in our democracy.</p>
       <Row>
         <Col sm="4"></Col>
         <Col sm="4">
